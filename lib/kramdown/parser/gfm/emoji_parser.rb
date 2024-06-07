@@ -15,7 +15,7 @@ module Kramdown
 
       EMOJI_NAMES   = Emoji.all.flat_map(&:aliases).freeze
       REGISTRY      = EMOJI_NAMES.zip(EMOJI_NAMES).to_h.freeze
-      EMOJI_PATTERN = /:(\w+):/
+      EMOJI_PATTERN = /:([\w\+]+):/
 
       # Based on the path rendered by `jemoji` plugin on GitHub Pages.
       DEFAULT_ASSET_PATH = 'https://github.githubassets.com/images/icons/emoji'
